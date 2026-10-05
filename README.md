@@ -12,8 +12,8 @@ on Gabor enhancement, evaluated using standard biometric metrics.
 ## Results
 | Mode | EER (%) | Time (ms/image) |
 |------|---------|-----------------|
-| Baseline | X | Z1 |
-| Gabor enhanced | Y | Z2 |
+| Baseline | 28.88% | Z1 |
+| Gabor enhanced | 30.35% | Z2 |
 
 ![Baseline](results_baseline.png)
 ![Enhanced](results_enhanced.png)
