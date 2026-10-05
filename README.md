@@ -10,13 +10,12 @@ on Gabor enhancement, evaluated using standard biometric metrics.
 4. Evaluation: all-pairs comparison (280 genuine, 2,880 impostor), FAR / FRR / EER
 
 ## Results
-| Mode | EER (%) | Time (ms/image) |
-|------|---------|-----------------|
-| Baseline | 28.88% | Z1 |
-| Gabor enhanced | 30.35% | Z2 |
+| Mode | EER | FRR at FAR = 1% | FRR at FAR = 0.1% | Time (ms/image) |
+|------|-----|-----------------|-------------------|-----------------|
+| Baseline (histogram equalization) | **28.88%** | ~74% | ~80% | (fill in) |
+| Gabor enhanced | **30.35%** | ~80% | ~88% | (fill in) |
 
-![Baseline](results_baseline.png)
-![Enhanced](results_enhanced.png)
+
 
 ## Usage
 pip install fingerprint_enhancer opencv-python scikit-learn matplotlib
@@ -28,10 +27,9 @@ python fingerprint_eval.py --data DB1_B
 - ORB is a general-purpose detector, not minutiae-based
 - No liveness / spoof detection
 
-## Future Work
-- Minutiae-based matching
-- Larger datasets (FVC2004, multiple sensors)
-- C++ implementation for edge deployment
+**Conclusion:** Gabor enhancement did **not** improve ORB-based matching. The 1.5-point difference is about 4 of 280 genuine pairs, so the honest reading is "no improvement", not "clearly worse".
+![Baseline](results_baseline.png)
+![Enhanced](results_enhanced.png)
 
 ## Acknowledgements
 Enhancement uses the open-source fingerprint_enhancer library by Utkarsh Deshmukh.
