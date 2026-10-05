@@ -28,7 +28,9 @@ python fingerprint_eval.py --data DB1_B
 - No liveness / spoof detection
 
 ## Conclusion
+
 Gabor enhancement did **not** improve ORB-based matching. The 1.5-point difference is about 4 of 280 genuine pairs, so the honest reading is "no improvement", not "clearly worse".
+
 ![Baseline](results_baseline.png)
 ![Enhanced](results_enhanced.png)
 
